@@ -429,7 +429,7 @@ module SonicPi
         "-z" =>  block_size.to_s,
         "-i" => "2",
         "-o" => "2",
-        "-U" => "/usr/lib/SuperCollider/plugins"}
+        "-U" => "/usr/lib/SuperCollider/plugins:#{native_path}/plugins"}
 
       scsynth_opts = @default_scsynth_opts.merge(local_scsynth_opts).merge(@user_scsynth_opts)
 

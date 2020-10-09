@@ -20,6 +20,10 @@ if [ "$1" = "--build-aubio" ]; then
   cp "${SCRIPT_DIR}/external/build/aubio-prefix/src/aubio-build/libaubio-5.so" "${SCRIPT_DIR}/server/native/lib/"
 fi
 
+echo "Copying extra UGens to the server..."
+mkdir -p "${SCRIPT_DIR}/../../server/native/plugins"
+cp ${SCRIPT_DIR}/external/build/supercollider-plugins-prefix/src/supercollider-plugins-build/*.so ${SCRIPT_DIR}/../../server/native/plugins
+
 #dont remove ruby-aubio-prerelease, as needed in linux build
 #it is removed in the windows-prebuild
 
