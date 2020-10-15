@@ -11,6 +11,7 @@ class QBoxLayout;
 class QGroupBox;
 class QComboBox;
 class QCheckBox;
+class QSpinBox;
 class QPushButton;
 class QLabel;
 class QLineEdit;
@@ -85,6 +86,9 @@ private:
     int server_osc_cues_port;
 
     QTabWidget *prefTabs;
+
+    QLabel    *server_connection_timeout_label;
+    QSpinBox  *server_connection_timeout_sb;
 
     QCheckBox *mixer_invert_stereo;
     QCheckBox *mixer_force_mono;
