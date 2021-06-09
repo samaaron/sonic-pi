@@ -14,4 +14,7 @@ echo "Building sp_midi..."
 cmake --build . --target sp_midi
 cmake --build . --target aubio
 
+echo "Building supercollider-plugins..."
+cmake --build . --target supercollider-plugins
+
 cd "${SCRIPT_DIR}"

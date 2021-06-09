@@ -15,6 +15,10 @@ cp ${SCRIPT_DIR}/external/build/sp_midi-prefix/src/sp_midi-build/*.so ${SCRIPT_D
 
 cp "${SCRIPT_DIR}/external/build/aubio-prefix/src/aubio-build/aubio_onset" "${SCRIPT_DIR}/server/native/"
 
+echo "Copying extra UGens to the server..."
+mkdir -p "${SCRIPT_DIR}/../../server/native/plugins"
+cp ${SCRIPT_DIR}/external/build/supercollider-plugins-prefix/src/supercollider-plugins-build/*.so ${SCRIPT_DIR}/../../server/native/plugins
+
 #dont remove ruby-aubio-prerelease, as needed in linux build
 #it is removed in the windows-prebuild
 
